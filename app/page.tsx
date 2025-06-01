@@ -32,47 +32,49 @@ export default function VipEletricaLanding() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-10 md:py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Mobile: Image first, Desktop: Text first */}
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 md:mb-6">
                 A <span className="text-yellow-400">Melhor</span> Empresa
                 <br />
                 de <span className="text-yellow-400">Elétrica</span>
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-                Problemas elétricos? Conte com a Vip Elétrica e fique tranquilo!
-                <br />
+              <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 md:mb-8 leading-relaxed">
+                Problemas elétricos? Conte with a Vip Elétrica e fique tranquilo!
+                <br className="hidden md:block" />
                 Profissionais certificados, produtos de qualidade e atendimento de excelência.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                 <Button
                   size="lg"
-                  className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-4 text-lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto"
                   asChild
                 >
                   <Link href="https://wa.me/5511957092479" target="_blank">
-                    <Phone className="w-5 h-5 mr-2" />
+                    <Phone className="w-4 md:w-5 h-4 md:h-5 mr-2" />
                     Solicitar Orçamento
                   </Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-blue-900 hover:bg-white hover:text-blue-900 px-8 py-4 text-lg"
+                  className="border-white text-blue-900 hover:bg-white hover:text-blue-900 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto"
                   asChild
                 >
                   <Link href="#servicos">Ver Serviços</Link>
                 </Button>
               </div>
             </div>
-            <div className="flex justify-center lg:justify-end">
+            {/* Mobile: Image before buttons, Desktop: Image after text */}
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
               <div className="relative">
                 <img
                   src="/images/vip-logo.png"
                   alt="Vip Elétrica - A Melhor Empresa de Elétrica"
-                  className="w-full max-w-lg rounded-3xl shadow-2xl"
+                  className="w-full max-w-sm md:max-w-lg rounded-3xl shadow-2xl"
                 />
               </div>
             </div>
@@ -80,18 +82,18 @@ export default function VipEletricaLanding() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="servicos" className="py-20 bg-white">
+      {/* Services Section - melhorar responsividade */}
+      <section id="servicos" className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Nossos Serviços</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-4">Nossos Serviços</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Oferecemos soluções completas em elétrica com profissionais certificados e produtos de alta qualidade para
               sua segurança e tranquilidade.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Energia Solar */}
             <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="h-80 relative bg-white p-4">
@@ -290,43 +292,129 @@ export default function VipEletricaLanding() {
         </div>
       </section>
 
+      {/* Adicionar nova seção de storytelling após "Why Choose Us" */}
+      {/* Storytelling CTA Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-400 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8 md:mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-full mb-6 shadow-lg">
+                <Zap className="w-8 h-8 md:w-10 md:h-10 text-blue-900" />
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+                Imagine sua casa sempre segura e eficiente
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-blue-900 mb-3">O Problema</h3>
+                <p className="text-gray-700 text-sm md:text-base">
+                  Fiação antiga, quedas de energia constantes, conta de luz alta e o medo de acidentes elétricos em
+                  casa.
+                </p>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-xl">2</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-blue-900 mb-3">A Solução</h3>
+                <p className="text-gray-700 text-sm md:text-base">
+                  A Vip Elétrica chega com profissionais certificados e soluções modernas para transformar sua
+                  realidade.
+                </p>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-xl">3</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-blue-900 mb-3">O Resultado</h3>
+                <p className="text-gray-700 text-sm md:text-base">
+                  Casa segura, conta de luz reduzida, energia solar sustentável e total tranquilidade para sua família.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-blue-900 rounded-3xl p-6 md:p-8 text-white mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Não deixe para amanhã o que pode resolver hoje!</h3>
+              <p className="text-lg md:text-xl text-blue-100 mb-6">
+                Cada dia que passa com problemas elétricos é um dia a mais de risco e desperdício. Sua família merece
+                segurança e você merece economia.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto"
+                  asChild
+                >
+                  <Link
+                    href="https://wa.me/5511957092479?text=Quero resolver meus problemas elétricos agora!"
+                    target="_blank"
+                  >
+                    <Phone className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                    Resolver Agora
+                  </Link>
+                </Button>
+                <div className="text-center sm:text-left">
+                  <p className="text-yellow-400 font-semibold text-sm md:text-base">Orçamento Gratuito</p>
+                  <p className="text-blue-200 text-xs md:text-sm">Atendimento 24h</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-blue-900 font-semibold text-sm md:text-base">
+              ⚡ Mais de 500 famílias já transformaram suas casas com a Vip Elétrica
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Melhorar responsividade das outras seções também */}
       {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">Sobre a Vip Elétrica</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 md:mb-6">
+                Sobre a Vip Elétrica
+              </h2>
+              <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
                 Com anos de experiência no mercado elétrico, a Vip Elétrica se consolidou como referência em qualidade,
                 segurança e inovação. Nossa missão é oferecer soluções elétricas completas que garantam a tranquilidade
                 e satisfação de nossos clientes.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
                 Trabalhamos com uma equipe altamente qualificada e certificada, utilizando apenas materiais de primeira
                 linha e seguindo rigorosamente as normas de segurança. Mais que negócios, construímos uma relação de
                 parceria duradoura com cada cliente.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-900">500+</div>
-                  <div className="text-gray-600">Projetos Realizados</div>
+                  <div className="text-2xl md:text-3xl font-bold text-blue-900">500+</div>
+                  <div className="text-sm md:text-base text-gray-600">Projetos Realizados</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-900">100%</div>
-                  <div className="text-gray-600">Clientes Satisfeitos</div>
+                  <div className="text-2xl md:text-3xl font-bold text-blue-900">100%</div>
+                  <div className="text-sm md:text-base text-gray-600">Clientes Satisfeitos</div>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Nossa Missão</h3>
-                <p className="mb-6">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-6 md:p-8 text-white">
+                <h3 className="text-xl md:text-2xl font-bold mb-4">Nossa Missão</h3>
+                <p className="text-sm md:text-base mb-4 md:mb-6">
                   Proporcionar soluções elétricas seguras, eficientes e sustentáveis, superando as expectativas dos
                   nossos clientes através da excelência técnica e atendimento personalizado.
                 </p>
                 <div className="flex items-center space-x-4">
-                  <Shield className="w-8 h-8 text-yellow-400" />
-                  <span className="font-semibold">Certificação e Qualidade Garantida</span>
+                  <Shield className="w-6 md:w-8 h-6 md:h-8 text-yellow-400" />
+                  <span className="text-sm md:text-base font-semibold">Certificação e Qualidade Garantida</span>
                 </div>
               </div>
             </div>
