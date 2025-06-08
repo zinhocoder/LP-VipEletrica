@@ -43,7 +43,7 @@ export default function VipEletricaLanding() {
                 de <span className="text-yellow-400">Elétrica</span>
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 md:mb-8 leading-relaxed">
-                Problemas elétricos? Conte with a Vip Elétrica e fique tranquilo!
+                Problemas elétricos? Conte com a Vip Elétrica e fique tranquilo!
                 <br className="hidden md:block" />
                 Profissionais certificados, produtos de qualidade e atendimento de excelência.
               </p>
