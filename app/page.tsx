@@ -43,7 +43,7 @@ export default function VipEletricaLanding() {
                 de <span className="text-yellow-400">Elétrica</span>
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 md:mb-8 leading-relaxed">
-                Problemas elétricos? Conte com a Vip Elétrica e fique tranquilo!
+                Problemas elétricos? Conte with a Vip Elétrica e fique tranquilo!
                 <br className="hidden md:block" />
                 Profissionais certificados, produtos de qualidade e atendimento de excelência.
               </p>
@@ -76,6 +76,60 @@ export default function VipEletricaLanding() {
                   alt="Vip Elétrica - A Melhor Empresa de Elétrica"
                   className="w-full max-w-sm md:max-w-lg rounded-3xl shadow-2xl"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-blue-800 to-blue-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Veja como transformamos sua casa
+            </h2>
+            <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
+              Conheça nosso trabalho de perto e veja por que somos a escolha de centenas de famílias
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+              <video className="w-full h-auto aspect-square" controls preload="metadata">
+                <source src="/video.mp4" type="video/mp4" />
+                <p className="text-white p-8 text-center">
+                  Seu navegador não suporta o elemento de vídeo.
+                  <br />
+                  <Link href="https://wa.me/5511957092479" className="text-yellow-400 underline">
+                    Entre em contato conosco
+                  </Link>{" "}
+                  para saber mais sobre nossos serviços.
+                </p>
+              </video>
+
+              {/* Video overlay for better UX */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+            </div>
+
+            {/* Video description */}
+            <div className="mt-6 md:mt-8 text-center">
+              <p className="text-blue-100 text-sm md:text-base mb-4">🎥 Vídeo institucional - Conheça a Vip Elétrica</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
+                  asChild
+                >
+                  <Link href="https://wa.me/5511957092479?text=Vi o vídeo e gostaria de um orçamento" target="_blank">
+                    <Phone className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                    Solicitar Orçamento
+                  </Link>
+                </Button>
+                <div className="text-center">
+                  <p className="text-yellow-400 font-semibold text-sm">Orçamento Gratuito</p>
+                  <p className="text-blue-200 text-xs">Resposta em até 30 minutos</p>
+                </div>
               </div>
             </div>
           </div>
